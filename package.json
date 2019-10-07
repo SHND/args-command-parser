@@ -1,0 +1,28 @@
+{
+  "name": "args-command-parser",
+  "version": "1.0.0",
+  "description": "Nodejs command line argument parser",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
+  },
+  "keywords": [
+    "args",
+    "parser",
+    "tty",
+    "commandline"
+  ],
+  "author": "Sahand Javid",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^12.7.11",
+    "@typescript-eslint/eslint-plugin": "^2.3.2",
+    "@typescript-eslint/parser": "^2.3.2",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "^1.18.2"
+  }
+}
