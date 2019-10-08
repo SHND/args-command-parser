@@ -2,10 +2,12 @@
   "name": "args-command-parser",
   "version": "1.0.0",
   "description": "Nodejs command line argument parser",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "start": "node ./dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\"",
     "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
   },
   "keywords": [
@@ -23,6 +25,7 @@
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.4.0",
     "eslint-plugin-prettier": "^3.1.1",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "typescript": "^3.6.3"
   }
 }
