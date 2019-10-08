@@ -1,6 +1,6 @@
 # args-command-parser
 
-Nodejs command line argument parser.
+Nodejs opinionated command line argument parser.
 
 ## Installation
 
@@ -31,6 +31,8 @@ The value of the `argv` after the running the code above will be:
   longSwitches: { amend: [], between: [ '1', '10' ] }
 }
 ```
+
+args-command-parser by default parse `process.argv.slice(2)` but you can pass any array of strings to it.
 
 ## More Detail
 
