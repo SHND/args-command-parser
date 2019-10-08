@@ -1,16 +1,14 @@
-import Parser from './Parser';
-import ArgCollection from './ArgCollection';
+import Parser from './Parser'
+import ArgCollection from './ArgCollection'
 
-const argv = process.argv.slice(2);
+const argv = process.argv.slice(2)
 
 function Application(argv: string[]): ArgCollection {
-  const argCollection = Parser.parse(argv);
-  console.log(argCollection.data)
-  console.log(argCollection.rawdata)
-  return argCollection;
+  const argCollection = Parser.parse(argv)
+
+  return argCollection
 }
 
-Application(argv);
+Application(argv)
 
-
-export default Application;
+export default Application
