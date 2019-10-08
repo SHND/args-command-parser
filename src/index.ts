@@ -1,14 +1,8 @@
 import Parser from './Parser'
 import ArgCollection from './ArgCollection'
 
-const argv = process.argv.slice(2)
-
-function Application(argv: string[]): ArgCollection {
-  const argCollection = Parser.parse(argv)
-
-  return argCollection
+module.exports = function argsCommandParser(
+  argv: string[] = process.argv.slice(2)
+): ArgCollection {
+  return Parser.parse(argv)
 }
-
-Application(argv)
-
-export default Application
