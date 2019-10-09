@@ -18,7 +18,7 @@
     "commandline"
   ],
   "author": "Sahand Javid",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^12.7.11",
     "@typescript-eslint/eslint-plugin": "^2.3.2",
