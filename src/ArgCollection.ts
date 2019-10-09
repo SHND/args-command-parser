@@ -1,18 +1,7 @@
 import LongSwitch from './Args/LongSwitch'
 import ShortSwitch from './Args/ShortSwitch'
 import Command from './Args/Command'
-
-export interface Data {
-  commands: string[]
-  longSwitches: { [key: string]: string[] }
-  shortSwitches: { [key: string]: string[] }
-}
-
-export interface RawData {
-  commands: Command[]
-  longSwitches: { [key: string]: LongSwitch }
-  shortSwitches: { [key: string]: ShortSwitch }
-}
+import { Data, RawData } from './Models'
 
 class ArgCollection {
   private _data: RawData
