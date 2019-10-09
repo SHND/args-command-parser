@@ -13,9 +13,10 @@
   },
   "keywords": [
     "args",
+    "argument",
     "parser",
     "tty",
-    "commandline"
+    "command-line"
   ],
   "author": "Sahand Javid <sahand.javid@gmail.com>",
   "license": "MIT",
