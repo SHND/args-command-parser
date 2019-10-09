@@ -1,11 +1,9 @@
 class Arg {
-
   constructor(private argName: string) {}
 
   get name(): string {
-    return this.argName;
+    return this.argName
   }
-
 }
 
-export default Arg;
+export default Arg
