@@ -16,10 +16,18 @@ Lets say we created JavaScript version of git and execute it like below:
 node git.js commit -m "some message" --amend -abc value --between 1 10
 ```
 
-And we have the code below:
+And we have the **JavaScript** code below:
 
 ```js
 const argv = require('args-command-parser').parser().data
+```
+
+Or **TypeScript** code below:
+
+```js
+import { parser } from 'args-command-parser'
+
+const argv = parser().data
 ```
 
 The value of the `argv` after the running the code above will be:
