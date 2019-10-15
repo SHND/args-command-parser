@@ -19,7 +19,7 @@ node git.js commit -m "some message" --amend -abc value --between 1 10
 And we have the code below:
 
 ```js
-const argv = require('args-command-parser')().data
+const argv = require('args-command-parser').parser().data
 ```
 
 The value of the `argv` after the running the code above will be:
