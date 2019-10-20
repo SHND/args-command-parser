@@ -5,13 +5,6 @@ class ShortSwitch extends Switch {
     return arg.startsWith('-') && !arg.startsWith('--') && arg.length > 1
   }
 
-  // static isMultiple(arg: string): boolean {
-  //   if (!ShortSwitch.isShortSwitch(arg))
-  //     throw Error('Expecting arg to be a Short Switch string');
-
-  //   return arg.length > 2;
-  // }
-
   static getAllSwitches(arg: string): ShortSwitch[] {
     if (!ShortSwitch.isShortSwitch(arg))
       throw Error('Expecting arg to be a Short Switch string')
