@@ -1,6 +1,6 @@
 {
   "name": "args-command-parser",
-  "version": "1.0.10-0",
+  "version": "1.0.10",
   "description": "Nodejs opinionated command-line argument parser",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
