@@ -2,6 +2,8 @@
 
 Nodejs opinionated command line argument parser.
 
+[![Build Status](https://travis-ci.org/SHND/args-command-parser.svg?branch=master)](https://travis-ci.org/SHND/args-command-parser)
+
 ## Installation
 
 ```bash
