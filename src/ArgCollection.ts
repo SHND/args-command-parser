@@ -12,6 +12,17 @@ class ArgCollection {
       longSwitches: {},
       shortSwitches: {},
     }
+
+    this.hasCommand = this.hasCommand.bind(this)
+    this.getCommand = this.getCommand.bind(this)
+    this.hasShortSwitch = this.hasShortSwitch.bind(this)
+    this.getShortSwitch = this.getShortSwitch.bind(this)
+    this.hasLongSwitch = this.hasLongSwitch.bind(this)
+    this.getLongSwitch = this.getLongSwitch.bind(this)
+    this.appendCommand = this.appendCommand.bind(this)
+    this.addSwitch = this.addSwitch.bind(this)
+    this._addShortSwitch = this._addShortSwitch.bind(this)
+    this._addLongSwitch = this._addLongSwitch.bind(this)
   }
 
   get rawdata(): RawData {
@@ -73,20 +84,20 @@ class ArgCollection {
         const s = switches[i]
         if (i === switches.length - 1) s.values = values
 
-        this.addShortSwitch(s)
+        this._addShortSwitch(s)
       }
     } else if (LongSwitch.isLongSwitch(arg)) {
       const argName = arg.slice(2)
 
-      this.addLongSwitch(argName, values)
+      this._addLongSwitch(argName, values)
     } else {
       throw Error('arg is not ShortSwitch or LongSwitch')
     }
   }
 
-  private addShortSwitch(shortSwitch: ShortSwitch): void
-  private addShortSwitch(argName: string, argValues?: string[]): void
-  private addShortSwitch(
+  private _addShortSwitch(shortSwitch: ShortSwitch): void
+  private _addShortSwitch(argName: string, argValues?: string[]): void
+  private _addShortSwitch(
     switchOrArgName: string | ShortSwitch,
     argValues: string[] = []
   ): void {
@@ -102,9 +113,9 @@ class ArgCollection {
     }
   }
 
-  private addLongSwitch(longSwitch: LongSwitch): void
-  private addLongSwitch(argName: string, argValues?: string[]): void
-  private addLongSwitch(
+  private _addLongSwitch(longSwitch: LongSwitch): void
+  private _addLongSwitch(argName: string, argValues?: string[]): void
+  private _addLongSwitch(
     switchOrArgName: string | LongSwitch,
     argValues: string[] = []
   ): void {
