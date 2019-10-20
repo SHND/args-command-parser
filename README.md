@@ -3,6 +3,7 @@
 Nodejs opinionated command-line argument parser.
 
 [![Build Status](https://travis-ci.org/SHND/args-command-parser.svg?branch=master)](https://travis-ci.org/SHND/args-command-parser)
+[![Coverage Status](https://coveralls.io/repos/github/SHND/args-command-parser/badge.svg?branch=master)](https://coveralls.io/github/SHND/args-command-parser?branch=master)
 
 ## Installation
 
