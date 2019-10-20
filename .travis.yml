@@ -5,3 +5,4 @@ install:
   - npm install
 script:
   - npm test
+after_script: npx nyc npm test && npx nyc report --reporter=text-lcov | npx coveralls
