@@ -18,7 +18,7 @@ class Switch extends Arg {
   }
 
   hasValues(): boolean {
-    return this.argValues !== undefined
+    return this.argValues.length > 0
   }
 }
 
