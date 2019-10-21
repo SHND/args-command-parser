@@ -1,13 +1,7 @@
 import Switch from './Args/Switch'
 import ArgCollection from './ArgCollection'
 
-class Parser {
-  private argCollection: ArgCollection
-
-  constructor(private args: string[]) {
-    this.argCollection = Parser.parse(this.args)
-  }
-
+abstract class Parser {
   static parse(args: string[]): ArgCollection {
     const argCollection = new ArgCollection()
     let index = 0
