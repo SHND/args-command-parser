@@ -20,6 +20,10 @@
     "command-line"
   ],
   "author": "Sahand Javid <sahand.javid@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SHND/args-command-parser.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "@types/chai": "^4.2.3",
