@@ -310,19 +310,19 @@ describe('ArgCollection Class', () => {
 
     expect(shortSwitches['a'])
       .is.instanceof(ShortSwitch)
-      .and.is.eqls({ argName: 'a', argValues: ['v1', 'v2'] })
+      .and.is.deep.include({ argName: 'a', argValues: ['v1', 'v2'] })
 
     expect(shortSwitches['b'])
       .is.instanceof(ShortSwitch)
-      .and.is.eqls({ argName: 'b', argValues: [] })
+      .and.is.deep.include({ argName: 'b', argValues: [] })
 
     expect(longSwitches['long'])
       .is.instanceof(LongSwitch)
-      .and.is.eqls({ argName: 'long', argValues: ['v1', 'v2'] })
+      .and.is.deep.include({ argName: 'long', argValues: ['v1', 'v2'] })
 
     expect(longSwitches['longer'])
       .is.instanceof(LongSwitch)
-      .and.is.eqls({ argName: 'longer', argValues: [] })
+      .and.is.deep.include({ argName: 'longer', argValues: [] })
   })
 
   it('data', () => {
