@@ -7,6 +7,8 @@ class Switch extends Arg {
 
   constructor(argName: string, private argValues: string[] = []) {
     super(argName)
+
+    this.hasValues = this.hasValues.bind(this)
   }
 
   get values(): string[] {
