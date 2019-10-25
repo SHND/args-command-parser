@@ -1,6 +1,6 @@
 # args-command-parser
 
-Nodejs opinionated command-line argument parser.
+Nodejs minimal opinionated command-line argument parser.
 
 ![GitHub](https://img.shields.io/github/license/SHND/args-command-parser)
 [![Build Status](https://travis-ci.org/SHND/args-command-parser.svg?branch=master)](https://travis-ci.org/SHND/args-command-parser)
@@ -14,24 +14,16 @@ npm install args-command-parser
 
 ## Usage
 
-Lets say we created JavaScript version of git and execute it like below:
+Assume that we have created JavaScript version of git and execute it like below:
 
-```bash
+```
 node git.js commit -m "some message" --amend -abc value --between 1 10
 ```
 
-And we have the **JavaScript** code below:
+Lets import **args-command-parser** and call parse method on it:
 
 ```js
 const argv = require('args-command-parser').parser().data
-```
-
-Or **TypeScript** code below:
-
-```js
-import { parser } from 'args-command-parser'
-
-const argv = parser().data
 ```
 
 The value of the `argv` after the running the code above will be:
@@ -44,7 +36,7 @@ The value of the `argv` after the running the code above will be:
 }
 ```
 
-args-command-parser by default parse `process.argv.slice(2)` but you can pass any array of strings to it.
+**args-command-parser** by default parse `process.argv.slice(2)` but you can pass any array of strings to it.
 
 ## More Details
 
