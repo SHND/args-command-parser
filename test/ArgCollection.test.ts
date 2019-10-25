@@ -61,6 +61,18 @@ describe('ArgCollection Class', () => {
       .which.is.an('array').and.is.empty
   })
 
+  it('_addLongSwitch for LongSwitch', () => {
+    const argCollection1 = new ArgCollection()
+    const addLongSwitch = argCollection1['_addLongSwitch']
+    const longSwitch = new LongSwitch('ab')
+    addLongSwitch(longSwitch)
+
+    const aProperty = argCollection1['_data']['longSwitches']['ab']
+    expect(aProperty)
+      .has.property('argName')
+      .which.is.equal('ab')
+  })
+
   it('addSwitch for string for "-a"', () => {
     const argCollection1 = new ArgCollection()
 
@@ -176,6 +188,14 @@ describe('ArgCollection Class', () => {
       .has.property('argValues')
       .which.is.an('array')
       .and.is.eql(['v1', 'v2'])
+  })
+
+  it('addSwitch for string for "abc" and values "[v1,v2]"', () => {
+    const argCollection1 = new ArgCollection()
+
+    expect(() => {
+      argCollection1.addSwitch('abc')
+    }).throws()
   })
 
   it('hasShortSwitch', () => {

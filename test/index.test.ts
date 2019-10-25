@@ -80,6 +80,17 @@ describe('Parser Class and index', () => {
     })
   })
 
+  it('parser "[-a, -b]"', () => {
+    const args: string[] = ['-a', '-b']
+    const argCollection1 = parser(args)
+
+    expect(argCollection1.data).is.eql({
+      commands: [],
+      shortSwitches: { a: [], b: [] },
+      longSwitches: {},
+    })
+  })
+
   it('parser "[-a, v1, v2, -b]"', () => {
     const args: string[] = ['-a', 'v1', 'v2', '-b']
     const argCollection1 = parser(args)
