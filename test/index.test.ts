@@ -6,6 +6,21 @@ describe('Parser Class and index', () => {
                   Empty
   =================================== */
 
+  it('parser empty', () => {
+    const processArgv = process.argv;
+    process.argv = ['node', 'app']
+
+    const argCollection1 = parser()
+
+    expect(argCollection1.data).is.eql({
+      commands: [],
+      shortSwitches: {},
+      longSwitches: {},
+    })
+
+    process.argv = processArgv
+  })
+
   it('parser "[]"', () => {
     const args: string[] = []
     const argCollection1 = parser(args)
