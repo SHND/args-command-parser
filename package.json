@@ -10,7 +10,7 @@
     "test": "cross-env TS_NODE_FILES=true mocha --exit --require ts-node/register --reporter spec --colors test/*.test.ts test/**/*.test.ts",
     "coverage": "nyc npm run test",
     "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
-    "publish": "np"
+    "publish": "npm run build; np"
   },
   "keywords": [
     "args",
