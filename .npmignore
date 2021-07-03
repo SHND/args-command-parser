@@ -5,6 +5,7 @@
 # source
 src/
 test/
+deno/
 
 # tools
 .gitignore
