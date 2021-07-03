@@ -20,10 +20,29 @@ Assume that we have created JavaScript version of git and execute it like below:
 node git.js commit -m "some message" --amend -abc value --between 1 10
 ```
 
-Lets import **args-command-parser** and call parse method on it:
+Lets first import the parser from **args-command-parser**:
+
+### Nodejs
+```js
+const { parser } = require('args-command-parser');
+```
+
+### ES6
+```js
+import argsCommandParser from 'args-command-parser';
+
+const { parser } = argsCommandParser;
+```
+
+### Deno
+```ts
+import { parser } from 'https://raw.githubusercontent.com/SHND/args-command-parser/master/deno/mod.js';
+```
+
+now lets call the parser and grab the arguments:
 
 ```js
-const argv = require('args-command-parser').parser().data
+const argv = parser().data;
 ```
 
 The value of the `argv` after the running the code above will be:
