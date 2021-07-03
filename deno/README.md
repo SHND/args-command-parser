@@ -5,7 +5,6 @@ Nodejs minimal opinionated command-line argument parser.
 ![GitHub](https://img.shields.io/github/license/SHND/args-command-parser)
 [![Build Status](https://travis-ci.org/SHND/args-command-parser.svg?branch=master)](https://travis-ci.org/SHND/args-command-parser)
 [![Coverage Status](https://coveralls.io/repos/github/SHND/args-command-parser/badge.svg?branch=master)](https://coveralls.io/github/SHND/args-command-parser?branch=master)
-
 [![Deno](https://img.shields.io/static/v1?label=&logo=Deno&message=Deno&color=222&logoColor=white)](https://deno.land/x/args_command_parser)
 [![Node.js](https://img.shields.io/static/v1?label=&logo=Node.js&message=Node.js&color=339933&logoColor=white)](https://nodejs.org)
 
