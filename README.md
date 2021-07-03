@@ -6,6 +6,9 @@ Nodejs minimal opinionated command-line argument parser.
 [![Build Status](https://travis-ci.org/SHND/args-command-parser.svg?branch=master)](https://travis-ci.org/SHND/args-command-parser)
 [![Coverage Status](https://coveralls.io/repos/github/SHND/args-command-parser/badge.svg?branch=master)](https://coveralls.io/github/SHND/args-command-parser?branch=master)
 
+[![Deno](https://img.shields.io/static/v1?label=&logo=Deno&message=Deno&color=222&logoColor=white)](https://deno.land/x/args_command_parser)
+[![Node.js](https://img.shields.io/static/v1?label=&logo=Node.js&message=Node.js&color=339933&logoColor=white)](https://nodejs.org)
+
 ## Installation
 
 ```bash
@@ -22,7 +25,7 @@ node git.js commit -m "some message" --amend -abc value --between 1 10
 
 Lets first import the parser from **args-command-parser**:
 
-### Nodejs
+### Node.js
 ```js
 const { parser } = require('args-command-parser');
 ```
@@ -36,7 +39,7 @@ const { parser } = argsCommandParser;
 
 ### Deno
 ```ts
-import { parser } from 'https://raw.githubusercontent.com/SHND/args-command-parser/master/deno/mod.js';
+import { parser } from 'https://deno.land/x/args_command_parser/mod.js';
 ```
 
 now lets call the parser and grab the arguments:
